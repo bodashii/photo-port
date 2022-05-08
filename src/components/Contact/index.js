@@ -32,7 +32,7 @@ function ContactForm() {
             console.log(formState);
         }
     }
-    
+
     function handleSubmit(e) {
         e.preventDefault();
         console.log(formState);
@@ -42,7 +42,7 @@ function ContactForm() {
     // JSX
     return (
         <section>
-            <h1>Contact me</h1>
+            <h1 data-testid="title">Contact me</h1>
             <form id="contact-form" onSubmit={handleSubmit}>
                 {/* name input */}
                 <div>
@@ -64,7 +64,7 @@ function ContactForm() {
                         <p className="error-text">{errorMessage}</p>
                     </div>
                 )}
-                <button type="submit">Submit</button>
+                <button data-testid="contact-submit" type="submit">Submit</button>
             </form>
         </section>
     )
